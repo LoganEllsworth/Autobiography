@@ -7,15 +7,13 @@ import Future from './pages/future/future';
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route path="home" element={<Home />} />
-          <Route path="history" element={<History />} />
-          <Route path="future" element={<Future />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<NavBar />}>
+        <Route path="home" element={<Home />} />
+        <Route path="history" element={<History />} />
+        <Route path="future" element={<Future />} />
+      </Route>
+    </Routes>
   );
 }
 

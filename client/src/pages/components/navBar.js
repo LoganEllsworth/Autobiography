@@ -1,51 +1,34 @@
-import { Link, Outlet } from "react-router-dom";
-import { styled } from '@mui/material/styles';
-import { AppBar, Box, Button, Container, Grid, Menu, MenuItem, Paper, Toolbar, Typography } from '@mui/material';
+import { Outlet } from 'react-router-dom';
+import { AppBar, Box, Button, Container, IconButton, Toolbar } from '@mui/material';
+import PersonIcon from '@mui/icons-material/Person';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
-const pages = ["About Me", "Where I've Been", "Where I'm Going"];
+const pages = [
+    { title: "Where I've Been", link: "/history" },
+    { title: "Where I'm At", link: "/home" },
+    { title: "Where I'm Going", link: "/future" },
+]
 
 const NavBar = () => {
     return (
         <>
-            {/* <AppBar position="static">
+            <AppBar position="static" sx={{ backgroundColor: 'primary', boxShadow: 'none' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <IconButton href={'/home'}><PersonIcon sx={{ display: { xs: 'none', md: 'flex' } }} /></IconButton>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent='end'>
                             {pages.map((page) => (
                                 <Button
+                                    href={page.link}
                                     key={page}
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                    sx={{ my: 2, mx: 4, color: 'white', display: 'block' }}
                                 >
-                                    {page}
+                                    {page.title}
                                 </Button>
                             ))}
                         </Box>
                     </Toolbar>
                 </Container>
-            </AppBar> */}
-            <div className="navBar">
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={2} direction="row" justifyContent="center" alignItems="center">
-                        <Grid item xs={4}>
-                            <Link to="/history">About Me</Link>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Link to="/history">History</Link>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Link to="/history">Future</Link>
-                        </Grid>
-                    </Grid>
-                </Box>
-            </div>
+            </AppBar>
             <Outlet />
         </>
     );
