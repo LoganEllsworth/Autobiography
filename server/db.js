@@ -1,5 +1,5 @@
-import { ListTablesCommand, DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { UpdateCommand, PutCommand, DynamoDBDocumentClient, ScanCommand, DeleteCommand } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import crypto from "crypto";
 import { DB_TYPES } from "./constants.js";
 
