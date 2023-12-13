@@ -2,11 +2,16 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   components: {
-    MuiButtonBase: {
+    MuiPaper: {
       defaultProps: {
-        
+        elevation: 3
       },
     },
+    MuiTimelineContent: {
+      defaultProps: {
+        alignSelf: 'center',
+      }
+    }
   },
   typography: {
     button: {
@@ -23,7 +28,7 @@ const theme = createTheme({
     //   main: '#f50057',
     // },
     // background: {
-    //   default: '#445d32',
+    //   default: '#b19a9a',
     //   paper: '#271f1f',
     // },
   },

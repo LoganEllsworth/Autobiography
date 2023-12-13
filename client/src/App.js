@@ -2,19 +2,17 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/home';
 import History from './pages/history/history';
-import NavBar from './pages/components/navBar';
-import Future from './pages/future/future';
+import Connect from './pages/connect/connect';
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<NavBar />}>
-        <Route path="home" element={<Home />} />
-        <Route path="history" element={<History />} />
-        <Route path="future" element={<Future />} />
-      </Route>
-    </Routes>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="history" element={<History />} />
+            <Route path="connect" element={<Connect />} />
+            <Route path="*" element={<Home />} />
+        </Routes>
+    );
 }
 
 export default App;
