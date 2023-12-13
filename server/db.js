@@ -19,7 +19,7 @@ export const createContactRequest = async ({ email, subject, message }) => {
         }
     });
 
-    const response = await docClient(command);
+    const response = await docClient.send(command);
 
     return response;
 }
@@ -34,7 +34,7 @@ export const createLog = async () => {
         }
     });
 
-    const response = await docClient(command);
+    const response = await docClient.send(command);
 
     return response;
 }
