@@ -26,7 +26,7 @@ const Home = () => {
 			style={{ width: '100%' }}
 		>
 			<Box sx={{ display: 'flex', flexDirection: 'column' }}>
-				<motion.div
+				{/* <motion.div
 					variants={cardVariants}
 				>
 					<Box sx={{ display: 'flex', flexDirection: 'row-reverse' }} paddingTop={'3%'} px={'12%'}>
@@ -49,7 +49,7 @@ const Home = () => {
 							</Fab>
 						</Tooltip>
 					</Box>
-				</motion.div>
+				</motion.div> */}
 				<Grid container spacing={2} px={'12%'} py={'1%'}>
 					<Grid item xs={isMobile ? 12 : 8} container direction='column' spacing={2}>
 						<Name variants={cardVariants} isMobile={isMobile} />
