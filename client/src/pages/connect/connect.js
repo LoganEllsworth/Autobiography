@@ -42,20 +42,23 @@ const Connect = () => {
 		if (response.success)
 			reset();
 		setLoading(false);
-		runMessage({message: 'test', success: true});
+		runMessage(response);
 	}
 
 	// Send API call with connect request
 	const createContactRequest = async ({ email, subject, message }) => {
         try {
+			console.log('test1');
             const response = await axios.post(`${API_URL}contact`, {
                 email,
                 subject,
                 message,
             });
+			console.log('test2');
 			console.log(response);
             return { success: true, message: `Message sent.`};
         } catch (error) {
+			console.log('test3');
             return { success: false, message: `Failed to send message. ${error}`};
         }
     }
@@ -98,7 +101,7 @@ const Connect = () => {
 									}
 									sx={{ mb: 2 }}
 								>
-									{popMessage.text}
+									{popMessage.message}
 								</Alert>
 							</Collapse>
 							<motion.div

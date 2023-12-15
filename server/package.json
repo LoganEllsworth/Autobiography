@@ -2,7 +2,6 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "node index",
     "dev": "set DEVELOPMENT=true && nodemon index"
@@ -13,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.465.0",
+    "@aws-sdk/client-s3": "^3.474.0",
     "@aws-sdk/lib-dynamodb": "^3.465.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
