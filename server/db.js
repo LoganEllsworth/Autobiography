@@ -3,7 +3,7 @@ import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import crypto from "crypto";
 import { DB_TYPES } from "./constants.js";
 
-const client = new DynamoDBClient({ region: "us-west-2"});
+const client = new DynamoDBClient({ region: "us-west-2" });
 const docClient = DynamoDBDocumentClient.from(client);
 
 export const createContactRequest = async ({ email, subject, message }) => {

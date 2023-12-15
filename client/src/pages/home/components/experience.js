@@ -19,7 +19,7 @@ const experiences = [
 	{
 		title: 'Assistant Manager',
 		company: 'Harkins Theaters',
-		dateRange: 'March 2018 - May 2022',
+		dateRange: 'May 2021 - May 2022',
 		bullets: [
 			'Created new staff programs and training procedures',
 			'Screened and interviewed applicants',
@@ -28,7 +28,30 @@ const experiences = [
 			'Excelled in customer management',
 			'Managed digital content and hardware for 16 screens',
 		]
-	}
+	},
+	{
+		title: 'Team Leader',
+		company: 'Harkins Theaters',
+		dateRange: 'March 2019 - May 2021',
+		bullets: [
+			'Managed teams of 2-10',
+			'Trained new hire groups on best practices',
+			'Maintained high standards for organization and cleanliness',
+			'Planned workflow and employee breaks',
+			'Took ownership of day-to-day operating responsibilities',
+			'Aided with customer management',
+		]
+	},
+	{
+		title: 'Team Leader',
+		company: 'Harkins Theaters',
+		dateRange: 'March 2018 - March 2019',
+		bullets: [
+			'Maintained a professional work environment',
+			'Stepped into leadership roles when possible',
+			'Strove to enhance guest experience',
+		]
+	},
 ]
 
 const Experience = ({ variants, isMobile }) => {
