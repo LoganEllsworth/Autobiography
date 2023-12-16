@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import { useAppStore } from "../../appStore";
-import { Alert, Collapse, Fab, Grid, IconButton, Tooltip } from "@mui/material";
+import { Alert, CircularProgress, Collapse, Fab, Grid, IconButton, Paper, Tooltip } from "@mui/material";
 import { motion } from "framer-motion";
 import Summary from "./components/summary";
 import Name from "./components/name";
@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Close } from "@mui/icons-material";
 import axios from "axios";
 import { API_URL } from "../../constants";
+import ReactGA from "react-ga4";
 
 const Home = () => {
 	const isMobile = useAppStore();
@@ -27,7 +28,8 @@ const Home = () => {
 	};
 
 	const downloadData = async (type) => {
-		setLoading(true);
+		setLoading(type);
+		ReactGA.event({ category: 'interaction', action: 'download', label: type })
 		let response = {success: false, message: 'Failed to fetch data.'};
 		
 		switch (type) {
@@ -44,8 +46,9 @@ const Home = () => {
 				break;
 		}
 
-		setLoading(false);
-		runMessage(response);
+		setLoading(null);
+		if (!response.success)
+			runMessage(response);
 	}
 
 	// Send API call with connect request
@@ -124,19 +127,19 @@ const Home = () => {
 					<Box sx={{ display: 'flex', flexDirection: 'row-reverse' }}  px={'12%'}>
 						{/* <Tooltip title="Download via AWS S3 Bucket">
 							<Fab variant="extended" sx={{ alignSelf: 'flex-end', marginLeft: '2%' }} onClick={() => downloadData('pdf')}>
-								<Download />
+								{loading === 'pdf' ? <CircularProgress /> : <Download />}
 								PDF
 							</Fab>
 						</Tooltip> */}
 						<Tooltip title="View JSON via REST API">
 							<Fab variant="extended" sx={{ alignSelf: 'flex-end', marginLeft: '2%' }} onClick={() => downloadData('json')}>
-								<Download />
+								{loading === 'json' ? <CircularProgress /> : <Download />}
 								JSON
 							</Fab>
 						</Tooltip>
 						<Tooltip title="View XML via REST API">
 							<Fab variant="extended" sx={{ alignSelf: 'flex-end', marginLeft: '2%' }} onClick={() => downloadData('xml')}>
-								<Download />
+								{loading === 'xml' ? <CircularProgress /> : <Download />}
 								XML
 							</Fab>
 						</Tooltip>

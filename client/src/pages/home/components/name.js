@@ -1,6 +1,7 @@
 import { Grid, Link, Paper, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import PersonIcon from '@mui/icons-material/Person';
+// import PersonIcon from '@mui/icons-material/Person';
+import headshot3 from "../../../assets/headshot3.png";
 
 const Name = ({ variants, isMobile }) => {
     return (
@@ -11,8 +12,8 @@ const Name = ({ variants, isMobile }) => {
                 <Paper className={'basicPaper'}>
                     <Grid container direction='row' justifyContent={isMobile ? 'center' : 'space-between'}>
                         {isMobile && <Grid item sx={{justifySelf: 'center'}}>
-                            <PersonIcon />
-                            {/* <img className='circularImage' src={'https://cdn.discordapp.com/attachments/504065122713468939/1183297490053775391/dem-headshot.jpg?ex=6587d2aa&is=65755daa&hm=a83d26c7904934d67db63296cfbc42445b0df465c55cbe5793430cd769d6b2c0&'} alt={"My Headshot"} /> */}
+                            {/* <PersonIcon /> */}
+                            <img className='circularImage' src={headshot3} alt={"My Headshot"} />
                         </Grid>}
                         <Grid item>
                             <Typography variant='h4' textAlign={isMobile ? 'center' : null}>Logan Ellsworth</Typography>
@@ -20,8 +21,8 @@ const Name = ({ variants, isMobile }) => {
                             <Link href='mailto:loganellsworth20@outlook.com'><Typography variant='subtitle1' textAlign={isMobile ? 'center' : null}>loganellsworth20@outlook.com</Typography></Link>
                         </Grid>
                         {!isMobile && <Grid item>
-                            <PersonIcon className={'circularImage'} sx={{ fontSize: 100 }} />
-                            {/* <img className='circularImage' src={'https://cdn.discordapp.com/attachments/504065122713468939/1183297490053775391/dem-headshot.jpg?ex=6587d2aa&is=65755daa&hm=a83d26c7904934d67db63296cfbc42445b0df465c55cbe5793430cd769d6b2c0&'} alt={"My Headshot"} /> */}
+                            {/* <PersonIcon className={'circularImage'} sx={{ fontSize: 100 }} /> */}
+                            <img className='circularImage' src={headshot3} alt={"My Headshot"} />
                         </Grid>}
                     </Grid>
                 </Paper>

@@ -48,17 +48,13 @@ const Connect = () => {
 	// Send API call with connect request
 	const createContactRequest = async ({ email, subject, message }) => {
         try {
-			console.log('test1');
             const response = await axios.post(`${API_URL}contact`, {
                 email,
                 subject,
                 message,
             });
-			console.log('test2');
-			console.log(response);
             return { success: true, message: `Message sent.`};
         } catch (error) {
-			console.log('test3');
             return { success: false, message: `Failed to send message. ${error}`};
         }
     }
