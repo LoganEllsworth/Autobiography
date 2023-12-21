@@ -21,7 +21,7 @@ const Certifications = ({ variants, isMobile }) => {
             >
                 <Paper className={'basicPaper'}>
                     <Typography variant='h4' textAlign={isMobile ? 'center' : null} py={'2%'}>Certifications</Typography>
-                    {certifications.map((x, index) => <ItemTemplate data={x} key={index} />)}
+                    {certifications.map((x, index) => <ItemTemplate data={x} key={index} isMobile={isMobile} />)}
                 </Paper>
             </motion.div>
         </Grid>

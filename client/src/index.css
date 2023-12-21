@@ -5,7 +5,16 @@
     margin: 2%;
     width: 100%;
     max-width: 220px;
-  }
+}
+
+.circularImageIcon {
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin: 2%;
+    width: 100%;
+    max-width: 50px;
+}
 
 .basicPaper {
     padding: 2%;

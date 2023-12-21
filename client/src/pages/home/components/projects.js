@@ -44,7 +44,7 @@ const projects = [
 		]
     },
 ]
-//NEED TO ADD TITLEURL PROP TO ITEM TEMPLATE AS WELL AS HANDLE MOBILE STYLING FOR THE SPACING AND LINE BREAKS
+
 const Projects = ({ variants, isMobile }) => {
     return (
         <Grid item>
@@ -53,7 +53,7 @@ const Projects = ({ variants, isMobile }) => {
             >
                 <Paper className={'basicPaper'}>
                     <Typography variant='h4' textAlign={isMobile ? 'center' : null} py={'2%'}>Projects</Typography>
-                    {projects.map((x, index) => <ItemTemplate data={x} key={index} />)} 
+                    {projects.map((x, index) => <ItemTemplate data={x} key={index} isMobile={isMobile} />)} 
                 </Paper>
             </motion.div>
         </Grid>

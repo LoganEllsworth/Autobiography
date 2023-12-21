@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import { useAppStore } from "../../appStore";
-import { Alert, CircularProgress, Collapse, Fab, Grid, IconButton, Paper, Tooltip } from "@mui/material";
+import { Alert, CircularProgress, Collapse, Grid, IconButton, SpeedDial, SpeedDialAction } from "@mui/material";
 import { motion } from "framer-motion";
 import Summary from "./components/summary";
 import Name from "./components/name";
@@ -9,35 +9,40 @@ import Certifications from "./components/certifications";
 import Education from "./components/education";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
-import Download from "@mui/icons-material/Download";
+import { Download, PictureAsPdf, Code, DataObject } from "@mui/icons-material";
 import { useState } from "react";
 import { Close } from "@mui/icons-material";
 import axios from "axios";
 import { API_URL } from "../../constants";
 import ReactGA from "react-ga4";
+import resumePdf from "../../assets/Ellsworth_Logan_Resume.pdf";
 
 const Home = () => {
 	const isMobile = useAppStore();
 	const [loading, setLoading] = useState(false);
 	const [displayMessage, setDisplayMessage] = useState(false);
 	const [popMessage, setPopMessage] = useState(false);
-	const [pdfData, setPdfData] = useState();
 	const cardVariants = {
 		offscreen: { y: '1000%' },
 		onscreen: { y: 0, transition: { type: 'spring', bounce: .05, duration: 1.5 } },
 	};
+	const downloadAction = [
+		{ icon: <PictureAsPdf />, name: 'PDF', tooltip: 'Download as a PDF' },
+		{ icon: <DataObject />, name: 'JSON', tooltip: 'View JSON via REST API' },
+		{ icon: <Code />, name: 'XML', tooltip: 'View XML via REST API' },
+	]
 
 	const downloadData = async (type) => {
-		setLoading(type);
+		setLoading(true);
 		ReactGA.event({ category: 'interaction', action: 'download', label: type })
 		let response = {success: false, message: 'Failed to fetch data.'};
 		
 		switch (type) {
-			case 'json':
+			case 'JSON':
 				response = await fetchData({ rawForm: '/json', route: 'raw' });
 				break;
 
-			case 'xml':
+			case 'XML':
 				response = await fetchData({ rawForm: '/xml', route: 'raw' });
 				break;
 
@@ -46,7 +51,7 @@ const Home = () => {
 				break;
 		}
 
-		setLoading(null);
+		setLoading(false);
 		if (!response.success)
 			runMessage(response);
 	}
@@ -54,23 +59,16 @@ const Home = () => {
 	// Send API call with connect request
 	const fetchData = async ({ rawForm, route }) => {
 		try {
-			let url = `${API_URL}document/${route}`;
-			
-			if (rawForm)
-				url += rawForm;
-
-			const response = await axios.get(url);
-
 			if (!rawForm) {
-				const pdfContent = response.body;
-				const blob = new Blob([pdfContent], {type: 'application/pdf'});
 				const link = document.createElement('a');
-				link.href = window.URL.createObjectURL(blob);
+				link.href = resumePdf;
 				link.download = 'Ellsworth-Logan-Resume.pdf';
+				document.body.appendChild(link)
 				link.click();
-				window.URL.revokeObjectURL(link.href);
-				setPdfData(pdfContent);
+				document.body.removeChild(link);
 			} else {
+				let url = `${API_URL}document/${route}${rawForm}`;
+				const response = await axios.get(url);
 				const resData = rawForm === '/json' ? JSON.stringify(response.data, null, 2) : response.data;
 				const blob = new Blob([resData], { type: `application${rawForm}` });
 				const blobUrl = URL.createObjectURL(blob);
@@ -124,28 +122,25 @@ const Home = () => {
 				<motion.div
 					variants={cardVariants}
 				>
-					<Box sx={{ display: 'flex', flexDirection: 'row-reverse' }}  px={'12%'}>
-						{/* <Tooltip title="Download via AWS S3 Bucket">
-							<Fab variant="extended" sx={{ alignSelf: 'flex-end', marginLeft: '2%' }} onClick={() => downloadData('pdf')}>
-								{loading === 'pdf' ? <CircularProgress /> : <Download />}
-								PDF
-							</Fab>
-						</Tooltip> */}
-						<Tooltip title="View JSON via REST API">
-							<Fab variant="extended" sx={{ alignSelf: 'flex-end', marginLeft: '2%' }} onClick={() => downloadData('json')}>
-								{loading === 'json' ? <CircularProgress /> : <Download />}
-								JSON
-							</Fab>
-						</Tooltip>
-						<Tooltip title="View XML via REST API">
-							<Fab variant="extended" sx={{ alignSelf: 'flex-end', marginLeft: '2%' }} onClick={() => downloadData('xml')}>
-								{loading === 'xml' ? <CircularProgress /> : <Download />}
-								XML
-							</Fab>
-						</Tooltip>
+					<Box sx={{ display: 'flex', flexDirection: 'row-reverse' }}  px={'8%'}>
+						<SpeedDial
+							ariaLabel="Download Menu"
+							icon={loading ? <CircularProgress /> : <Download />}
+							direction={"left"}
+							FabProps={{size: 'small'}}
+						>
+							{downloadAction.map(action => (
+								<SpeedDialAction
+									key={action.name}
+									icon={action.icon}
+									tooltipTitle={action.tooltip}
+									onClick={() => downloadData(action.name)}
+								/>
+							))}
+						</SpeedDial>
 					</Box>
 				</motion.div>
-				<Grid container spacing={2} px={'12%'} py={'1%'}>
+				<Grid container spacing={2} px={'8%'} py={'1%'}>
 					<Grid item xs={isMobile ? 12 : 8} container direction='column' spacing={2} sx={{height: '100%'}}>
 						<Name variants={cardVariants} isMobile={isMobile} />
 						{isMobile && <Summary variants={cardVariants} isMobile={isMobile} />}

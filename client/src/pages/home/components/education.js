@@ -22,7 +22,7 @@ const Education = ({ variants, isMobile }) => {
             >
                 <Paper className={'basicPaper'}>
                     <Typography variant='h4' textAlign={isMobile ? 'center' : null} py={'2%'}>Education</Typography>
-                    {educations.map((x, index) => <ItemTemplate data={x} key={index} />)}
+                    {educations.map((x, index) => <ItemTemplate data={x} key={index} isMobile={isMobile} />)}
                 </Paper>
             </motion.div>
         </Grid>
