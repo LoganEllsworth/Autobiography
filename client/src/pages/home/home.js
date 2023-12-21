@@ -15,7 +15,6 @@ import { Close } from "@mui/icons-material";
 import axios from "axios";
 import { API_URL } from "../../constants";
 import ReactGA from "react-ga4";
-import resumePdf from "../../assets/Ellsworth_Logan_Resume.pdf";
 
 const Home = () => {
 	const isMobile = useAppStore();
@@ -60,8 +59,9 @@ const Home = () => {
 	const fetchData = async ({ rawForm, route }) => {
 		try {
 			if (!rawForm) {
+				const pdfUrl = "Ellsworth_Logan_Resume.pdf";
 				const link = document.createElement('a');
-				link.href = resumePdf;
+				link.href = pdfUrl;
 				link.download = 'Ellsworth-Logan-Resume.pdf';
 				document.body.appendChild(link)
 				link.click();
