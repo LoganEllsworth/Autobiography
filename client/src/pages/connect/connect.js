@@ -53,7 +53,11 @@ const Connect = () => {
                 subject,
                 message,
             });
-            return { success: true, message: `Message sent.`};
+			
+			if (response.status === 200)
+            	return { success: true, message: `Message sent.`};
+			else
+				return { success: false, message: `Failed to send. Please email me directly or try again later.`};
         } catch (error) {
             return { success: false, message: `Failed to send message. ${error}`};
         }

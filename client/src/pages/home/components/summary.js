@@ -10,7 +10,7 @@ const Summary = ({variants, isMobile}) => {
                 <Paper className={'basicPaper'}>
                     <Typography variant='h4' textAlign={isMobile ? 'center' : null} py={'2%'}>Summary</Typography>
                     <Typography variant='subtitle1'>
-                        This May I will be graduating from ASU with a BS in Computer Science. Additionally, I wil have 2 years of professional development
+                        This May I will be graduating from ASU with a BS in Computer Science. Additionally, I will have 2 years of professional development
                         experience and 2 years of management experience.
                     </Typography>
                     <Typography variant='subtitle1' py={.5}>
@@ -21,7 +21,7 @@ const Summary = ({variants, isMobile}) => {
                     </Typography>
                     <Typography variant='subtitle1' py={.5}>
                         I am extremely grateful for the 4 years I spent at Harkins Theaters as it developed my interpersonal skills as both a manager, mentor,
-                        and colleague. It allowed me to develope an incredible work ethic and I take pride in the work I completed and completing it efficiently.
+                        and colleague. It allowed me to develop an incredible work ethic and I take pride in the work I completed and completing it efficiently.
                         Working with a sense of urgency yet maintaining a high expectation for quality is something I am very proud of.
                     </Typography>
                 </Paper>
