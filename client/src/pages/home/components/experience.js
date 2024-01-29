@@ -43,7 +43,7 @@ const experiences = [
 		]
 	},
 	{
-		title: 'Team Leader',
+		title: 'Team Member',
 		company: 'Harkins Theaters',
 		dateRange: 'March 2018 - March 2019',
 		bullets: [
