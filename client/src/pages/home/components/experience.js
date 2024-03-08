@@ -8,12 +8,16 @@ const experiences = [
 		company: 'Sandhills Global',
 		dateRange: 'May 2022 - Present',
 		bullets: [
-			'Primary Technologies: PostgreSQL, React.js, Node.js, RESTful APIs, C#, Git, npm',
-			'Optimized legacy components with an updated UI and reusable components',
-			'Addressed tech-debt, including significant Node and CSS framework upgrades',
+			'Full-Stack E-Commerce Development',
+			'Designed features with stakeholders resulting in 30% revenue growth YoY',
+			'Delivered new data visualization dashboards and reporting features resulting in 10% subscription growth',
+			'Collaborating with Sales teams to create more automation and reduced man hours per call by 25%',
+			'Took ownership and became project point of contact and trainer, onboarding 2 employees',
+			'Implemented API security features and employee network validation to enhance security',
 			'Led the implementation of new user types resulting in 15% registration increases',
-			'Implemented features resulting in 30% revenue growth YoY',
-			'Created API security features and employee network validation to enhance security',
+			'Optimized legacy components with reusable components and a modern UI',
+			'Analyzed, planned, and currently implementing a mass migration and rewrite to MSSQL and Azure',
+			'Completed QA reports, bug reports, and code reviews',
 		]
 	},
 	{
@@ -22,10 +26,10 @@ const experiences = [
 		dateRange: 'May 2021 - May 2022',
 		bullets: [
 			'Created new staff programs and training procedures',
-			'Screened and interviewed applicants',
-			'Guided 10-50 directs on a given day',
-			'Maintained financial logs with 100% accuracy',
-			'Excelled in customer management',
+			'Emphasized staff development and trained to the highest standard',
+			'Managed 10-50 staff members overseeing daily operations',
+			'Maintained records and financial logs with 100% accuracy',
+			'Obsessed over guest experience and satisfaction',
 			'Managed digital content and hardware for 16 screens',
 		]
 	},
@@ -34,12 +38,10 @@ const experiences = [
 		company: 'Harkins Theaters',
 		dateRange: 'March 2019 - May 2021',
 		bullets: [
-			'Managed teams of 2-10',
+			'Managed schedules and breaks for 2-15 team members',
 			'Trained new hire groups on best practices',
 			'Maintained high standards for organization and cleanliness',
-			'Planned workflow and employee breaks',
-			'Took ownership of day-to-day operating responsibilities',
-			'Aided with customer management',
+			'Created motivating programs to increase performance and reward good work',
 		]
 	},
 	{
@@ -48,8 +50,7 @@ const experiences = [
 		dateRange: 'March 2018 - March 2019',
 		bullets: [
 			'Maintained a professional work environment',
-			'Stepped into leadership roles when possible',
-			'Strove to enhance guest experience',
+			'Took on leadership opportunities to grow within the company',
 		]
 	},
 ]
