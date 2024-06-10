@@ -4,11 +4,11 @@ import ItemTemplate from "./itemTemplate";
 
 const educations = [
 	{
-		title: 'BS, Computer Science',
+		title: 'B.S. in Computer Science',
 		company: 'Arizona State University',
 		dateRange: 'Aug 2020 - May 2024',
 		bullets: [
-			'GPA: 3.7',
+			'Machine Learning, SDLC, Software Distributions and Integrations, Mobile Applications',
             'Minor in Business',
         ]
     }

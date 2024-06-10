@@ -7,6 +7,7 @@ import headshot3 from '../../assets/headshot3.png';
 const pages = [
     { title: "History", link: "/history" },
     { title: "About Me", link: "/" },
+    { title: "Portfolio", link: "/portfolio" },
     { title: "Connect with Me", link: "/connect" },
 ]
 

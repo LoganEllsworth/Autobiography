@@ -46,8 +46,25 @@ app.get('/document/raw/:type', async (req, res) => {
 
 		const resumeJson = {
 			name: "Logan Ellsworth",
-			title: "Software Developer Intern",
+			title: "Software Developer",
 			experiences: [
+				{
+					jobTitle: 'Software Developer',
+					company: 'Sandhills Global',
+					dateRange: 'May 2022 - May 2024',
+					aboutRole: [
+						'Full-Stack Global E-Commerce Development using React, JavaScript, PostgreSQL and Docker',
+						'Created new data visualization dashboards using React, Express APIs, and SQL queries for end users',
+						'Maintained, tested, and debugged digital payment processing utilizing third party APIs',
+						'Created front end content that followed WCAG international standards across screen sizes and resolutions',
+						'Designed CRM features with stakeholders and product managers',
+						'Collaborating with Sales teams to create process automation',
+						'Took ownership and became project point of contact and trainer, onboarding 2 developers',
+						'Implemented Express API authorization features and employee network validation to enhance security',
+						'Completed a database migration from PostgreSQL to SQL Server while maintaining 100% data integrity',
+						'Analyzed development requests and participated in sprint planning and retrospective meetings',
+					]
+				},
 				{
 					jobTitle: 'Assistant Manager',
 					company: 'Harkins Theaters',
@@ -75,7 +92,7 @@ app.get('/document/raw/:type', async (req, res) => {
 					]
 				},
 				{
-					jobTitle: 'Team Leader',
+					jobTitle: 'Team Member',
 					company: 'Harkins Theaters',
 					dateRange: 'March 2018 - March 2019',
 					aboutRole: [
@@ -118,7 +135,22 @@ app.get('/document/raw/:type', async (req, res) => {
 		const resumeXml = `<?xml version="1.0" encoding="UTF-8" ?>
 		<resume>
 		  <name>Logan Ellsworth</name>
-		  <title>Software Developer Intern</title>
+		  <title>Software Developer</title>
+		  <experiences>
+			<jobTitle>Software Developer</jobTitle>
+			<company>Sandhills Global</company>
+			<dateRange>May 2022 - May 2024</dateRange>
+			<aboutRole>Full-Stack Global E-Commerce Development using React, JavaScript, PostgreSQL and Docker</aboutRole>
+			<aboutRole>Created new data visualization dashboards using React, Express APIs, and SQL queries for end users</aboutRole>
+			<aboutRole>Maintained, tested, and debugged digital payment processing utilizing third party APIs</aboutRole>
+			<aboutRole>Created front end content that followed WCAG international standards across screen sizes and resolutions</aboutRole>
+			<aboutRole>Designed CRM features with stakeholders and product managers</aboutRole>
+			<aboutRole>Collaborating with Sales teams to create process automation</aboutRole>
+			<aboutRole>Took ownership and became project point of contact and trainer, onboarding 2 developers</aboutRole>
+			<aboutRole>Implemented Express API authorization features and employee network validation to enhance security</aboutRole>
+			<aboutRole>Completed a database migration from PostgreSQL to SQL Server while maintaining 100% data integrity</aboutRole>
+			<aboutRole>Analyzed development requests and participated in sprint planning and retrospective meetings</aboutRole>
+		  </experiences>
 		  <experiences>
 			<jobTitle>Assistant Manager</jobTitle>
 			<company>Harkins Theaters</company>
@@ -142,7 +174,7 @@ app.get('/document/raw/:type', async (req, res) => {
 			<aboutRole>Aided with customer management</aboutRole>
 		  </experiences>
 		  <experiences>
-			<jobTitle>Team Leader</jobTitle>
+			<jobTitle>Team Member</jobTitle>
 			<company>Harkins Theaters</company>
 			<dateRange>March 2018 - March 2019</dateRange>
 			<aboutRole>Maintained a professional work environment</aboutRole>
