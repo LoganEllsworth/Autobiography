@@ -37,7 +37,7 @@ const experiences = [
 		company: 'Harkins Theaters',
 		dateRange: 'March 2019 - May 2021',
 		bullets: [
-			'Managed teams of 2-10',
+			'Managed schedules and breaks for 2-15 team members',
 			'Trained new hire groups on best practices',
 			'Maintained high standards for organization and cleanliness',
 			'Planned workflow and employee breaks',
