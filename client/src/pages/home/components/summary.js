@@ -10,7 +10,7 @@ const Summary = ({variants, isMobile}) => {
                 <Paper className={'basicPaper'}>
                     <Typography variant='h4' textAlign={isMobile ? 'center' : null} py={'2%'}>Summary</Typography>
                     <Typography variant='subtitle1' py={1}>
-                        This May I will be graduating from ASU with a BS in Computer Science. Additionally, I will have 2 years of professional development
+                        I have graduated from Arizona State with a B.S. in Computer Science. Additionally, I have 2 years of professional development
                         experience and 2 years of management experience.
                     </Typography>
                     <Typography variant='subtitle1' py={1}>

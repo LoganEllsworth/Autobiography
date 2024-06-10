@@ -1,6 +1,7 @@
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from "@mui/lab";
 import { useAppStore } from "../../appStore";
 import { motion } from "framer-motion";
+import { Box } from "@mui/system";
 import Highschool from "./components/highschool";
 import HarkinsTm from "./components/harkinsTm";
 import College from "./components/college";
@@ -10,10 +11,13 @@ import SkillsUsa from "./components/skillsUsa";
 import HighschoolGrad from "./components/highschoolGrad";
 import SandhillsGlobal from "./components/sandhillsGlobal";
 import AwsCert from "./components/awsCert";
-import { Box } from "@mui/system";
+import CollegeGrad from "./components/collegeGrad";
+import WashingtonMove from "./components/washingtonMove";
+import OpenToWork from "./components/openToWork";
 
 //Easily add and remove events from timeline in order of appearance
-const events = [{ Component: AwsCert, Date: 'Nov 2023' }, { Component: SandhillsGlobal, Date: 'May 2022' }, { Component: HarkinsAm, Date: 'May 2021' }, { Component: College, Date: 'August 2020' },
+const events = [{ Component: OpenToWork, Date: 'June 2024' }, { Component: WashingtonMove, Date: 'June 2024' }, { Component: CollegeGrad, Date: 'May 2024' },
+{ Component: AwsCert, Date: 'Nov 2023' }, { Component: SandhillsGlobal, Date: 'May 2022' }, { Component: HarkinsAm, Date: 'May 2021' }, { Component: College, Date: 'August 2020' },
 { Component: HighschoolGrad, Date: 'May 2020' }, { Component: HarkinsTl, Date: 'March 2019' }, { Component: HarkinsTm, Date: 'March 2018' },
 { Component: SkillsUsa, Date: 'May 2017' }, { Component: Highschool, Date: 'Aug 2016' }];
 

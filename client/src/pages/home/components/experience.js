@@ -8,16 +8,16 @@ const experiences = [
 		company: 'Sandhills Global',
 		dateRange: 'May 2022 - Present',
 		bullets: [
-			'Full-Stack E-Commerce Development',
-			'Designed features with stakeholders resulting in 30% revenue growth YoY',
-			'Delivered new data visualization dashboards and reporting features resulting in 10% subscription growth',
-			'Collaborating with Sales teams to create more automation and reduced man hours per call by 25%',
-			'Took ownership and became project point of contact and trainer, onboarding 2 employees',
-			'Implemented API security features and employee network validation to enhance security',
-			'Led the implementation of new user types resulting in 15% registration increases',
-			'Optimized legacy components with reusable components and a modern UI',
-			'Analyzed, planned, and currently implementing a mass migration and rewrite to MSSQL and Azure',
-			'Completed QA reports, bug reports, and code reviews',
+			'Full-Stack Global E-Commerce Development using React, JavaScript, PostgreSQL and Docker',
+			'Created new data visualization dashboards using React, Express APIs, and SQL queries for end users',
+			'Maintained, tested, and debugged digital payment processing utilizing third party APIs',
+			'Created front end content that followed WCAG international standards across screen sizes and resolutions',
+			'Designed CRM features with stakeholders and product managers',
+			'Collaborating with Sales teams to create process automation',
+			'Took ownership and became project point of contact and trainer, onboarding 2 developers',
+			'Implemented Express API authorization features and employee network validation to enhance security',
+			'Completed a database migration from PostgreSQL to SQL Server while maintaining 100% data integrity',
+			'Analyzed development requests and participated in sprint planning and retrospective meetings',
 		]
 	},
 	{
@@ -25,12 +25,11 @@ const experiences = [
 		company: 'Harkins Theaters',
 		dateRange: 'May 2021 - May 2022',
 		bullets: [
-			'Created new staff programs and training procedures',
-			'Emphasized staff development and trained to the highest standard',
+			'Promoted 6 levels from Team Member to Assistant Manager 4 since 2018',
+			'Emphasized staff development and training to the highest standard',
 			'Managed 10-50 staff members overseeing daily operations',
 			'Maintained records and financial logs with 100% accuracy',
-			'Obsessed over guest experience and satisfaction',
-			'Managed digital content and hardware for 16 screens',
+			'Obsessed with customer experience and satisfaction',
 		]
 	},
 	{
@@ -41,6 +40,8 @@ const experiences = [
 			'Managed schedules and breaks for 2-15 team members',
 			'Trained new hire groups on best practices',
 			'Maintained high standards for organization and cleanliness',
+			'Planned workflow and employee breaks',
+			'Took ownership of day-to-day operating responsibilities',
 			'Created motivating programs to increase performance and reward good work',
 		]
 	},
@@ -51,6 +52,7 @@ const experiences = [
 		bullets: [
 			'Maintained a professional work environment',
 			'Took on leadership opportunities to grow within the company',
+			'Strove to enhance guest experience',
 		]
 	},
 ]
