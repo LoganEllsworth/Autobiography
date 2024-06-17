@@ -15,7 +15,7 @@ const Name = ({ variants, isMobile }) => {
                         </Grid>}
                         <Grid item>
                             <Typography variant='h4' textAlign={isMobile ? 'center' : null}>Logan Ellsworth</Typography>
-                            <Typography variant='subtitle1' textAlign={isMobile ? 'center' : null}>Software Developer - Open to Work</Typography>
+                            <Typography variant='subtitle1' textAlign={isMobile ? 'center' : null}>Full Stack Software Engineer - Open to Work</Typography>
                             <Link href='mailto:loganellsworth20@outlook.com'><Typography variant='subtitle1' textAlign={isMobile ? 'center' : null}>loganellsworth20@outlook.com</Typography></Link>
                         </Grid>
                         {!isMobile && <Grid item>

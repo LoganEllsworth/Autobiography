@@ -4,20 +4,17 @@ import ItemTemplate from "./itemTemplate";
 
 const experiences = [
 	{
-		title: 'Software Developer',
+		title: 'Full Stack Software Engineer',
 		company: 'Sandhills Global',
 		dateRange: 'May 2022 - Present',
 		bullets: [
-			'Full-Stack Global E-Commerce Development using React, JavaScript, PostgreSQL and Docker',
-			'Created new data visualization dashboards using React, Express APIs, and SQL queries for end users',
-			'Maintained, tested, and debugged digital payment processing utilizing third party APIs',
-			'Created front end content that followed WCAG international standards across screen sizes and resolutions',
-			'Designed CRM features with stakeholders and product managers',
-			'Collaborating with Sales teams to create process automation',
-			'Took ownership and became project point of contact and trainer, onboarding 2 developers',
-			'Implemented Express API authorization features and employee network validation to enhance security',
-			'Completed a database migration from PostgreSQL to SQL Server while maintaining 100% data integrity',
-			'Analyzed development requests and participated in sprint planning and retrospective meetings',
+			'Worked on a global load board application for freight shippers and brokers utilizing React, JavaScript, PostgreSQL, and Docker while integrating into an existing C#, .NET and SQL Server ecosystem',
+			'Created dynamic data visualization dashboards for premium subscribers using React, RESTful APIs, and SQL queries resulting in a 12% increase in subscription upgrades during the first month',
+			'Built CRM capabilities allowing end users to view, favorite, group, and invite users to join the platform resulting in an 8% increase in registrations and positive feedback from clients',
+			'Followed WCAG international standards passing 4/4 audits with 100% acceptance',
+			'Designed process automation with product managers and sales teams, reducing man hours per call by 14%',
+			'Implemented additional payment processing providers utilizing third party APIs',
+			'Took ownership over the project and mentored 2 additional developers to grow the program',
 		]
 	},
 	{
@@ -28,8 +25,8 @@ const experiences = [
 			'Promoted 6 levels from Team Member to Assistant Manager 4 since 2018',
 			'Emphasized staff development and training to the highest standard',
 			'Managed 10-50 staff members overseeing daily operations',
-			'Maintained records and financial logs with 100% accuracy',
 			'Obsessed with customer experience and satisfaction',
+			'Created motivating programs to increase performance and reward good work',
 		]
 	},
 	{
@@ -37,12 +34,9 @@ const experiences = [
 		company: 'Harkins Theaters',
 		dateRange: 'March 2019 - May 2021',
 		bullets: [
-			'Managed schedules and breaks for 2-15 team members',
 			'Trained new hire groups on best practices',
 			'Maintained high standards for organization and cleanliness',
-			'Planned workflow and employee breaks',
 			'Took ownership of day-to-day operating responsibilities',
-			'Created motivating programs to increase performance and reward good work',
 		]
 	},
 	{
@@ -52,7 +46,6 @@ const experiences = [
 		bullets: [
 			'Maintained a professional work environment',
 			'Took on leadership opportunities to grow within the company',
-			'Strove to enhance guest experience',
 		]
 	},
 ]
