@@ -8,13 +8,15 @@ const experiences = [
 		company: 'Sandhills Global',
 		dateRange: 'May 2022 - Present',
 		bullets: [
-			'Worked on a global load board application for freight shippers and brokers utilizing React, JavaScript, PostgreSQL, and Docker while integrating into an existing C#, .NET and SQL Server ecosystem',
-			'Created dynamic data visualization dashboards for premium subscribers using React, RESTful APIs, and SQL queries resulting in a 12% increase in subscription upgrades during the first month',
-			'Built CRM capabilities allowing end users to view, favorite, group, and invite users to join the platform resulting in an 8% increase in registrations and positive feedback from clients',
-			'Followed WCAG international standards passing 4/4 audits with 100% acceptance',
-			'Designed process automation with product managers and sales teams, reducing man hours per call by 14%',
-			'Implemented additional payment processing providers utilizing third party APIs',
-			'Took ownership over the project and mentored 2 additional developers to grow the program',
+			'Created dynamic data visualization dashboards for premium subscribers using React, Express APIs, and SQL queries resulting in a 12% increase in subscription upgrades during the first month',
+			'Built relational CRM capabilities allowing end users to search, favorite, group, and invite users to join the platform resulting in an 8% increase in registrations via invites',
+			'Analyzed and implemented development requests on a global e-commerce application using JavaScript, Node.js, React, and PostgreSQL',
+			'Integrated an acquired application into a C#, .NET, SQL Server ecosystem, ensuring seamless compatibility',
+			'Performed deep dives for support tickets to discover root cause and designed fixes to resolve issues same-day',
+			'Created front end content to WCAG international standards, passing 4/4 internal audits with 100% acceptance',
+			'Designed process automation by collaborating with sales teams to reduce man hours per call by 14%',
+			'Implemented payment processing providers utilizing third party APIs',
+			'Took ownership over a global load board application and mentored 2 additional developers while in school full time',
 		]
 	},
 	{
@@ -22,11 +24,11 @@ const experiences = [
 		company: 'Harkins Theaters',
 		dateRange: 'May 2021 - May 2022',
 		bullets: [
-			'Promoted 6 levels from Team Member to Assistant Manager 4 since 2018',
-			'Emphasized staff development and training to the highest standard',
-			'Managed 10-50 staff members overseeing daily operations',
-			'Obsessed with customer experience and satisfaction',
-			'Created motivating programs to increase performance and reward good work',
+			'Promoted 6 levels from Team Member to Assistant Manager 4 within four years',
+			'Oversaw the day to day theater operation including a staff of 20-50 people, payroll management, inventory reconciliation and cash flow',
+			'Led Day 1 orientation for new employees and oversaw cross training for senior staff to optimize staffing coverage',
+			'Handled escalated customer concerns and worked closely with the team to ensure we were delivering on the “Ultimate Moviegoing experience”',
+			'Resolved basic troubleshooting concerns with 16 projectors while maintaining a flawless customer experience',
 		]
 	},
 	{
